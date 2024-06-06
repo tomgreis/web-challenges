@@ -1,0 +1,15 @@
+.main {
+  /* display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; */
+  background: var(--main-bg);
+  color: var(--main-text);
+}
+
+.main--title {
+  display: inline;
+  background: var(--main-title-bg);
+  color: var(--main-text);
+  padding: 0.6rem;
+  border-radius: 0.4rem;
+}
