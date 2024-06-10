@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Forms and A11y</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <section>
+      <h1 class="title" id="title" aria-label="Title: Understanding A11y Forms">
+        Understanding A11y in Forms
+      </h1>
+      <p id="description" aria-label="How can we support you with a11y issues?">
+        Please let us know how we can support you with a11y issues.
+      </p>
+
+      <form for="title" aria-describedby="title">
+        <fieldset>
+          <legend>Enter your information</legend>
+          <label for="name-input" aria-label="Type in your full name"
+            >Name:</label
+          >
+          <input id="name-input" type="text" name="name" />
+          <label for="age-input" aria-label="What is your age?">Age:</label>
+          <input id="age-input" type="text" name="age" />
+          <label for="color" aria-label="Which colors you can't see?"
+            >Color you cannot see:</label
+          >
+          <input id="color-input" type="color" name="color" />
+          <label for="textarea-input">Leave us a message:</label>
+          <textarea
+            id="textarea-input"
+            for="message"
+            aria-label="Please leave us a message"
+            rows="7"
+            placeholder="Leave us a message..."
+            name="message"
+          ></textarea>
+          <button type="submit" aria-label="Click here to submit your info!">
+            Submit
+          </button>
+        </fieldset>
+      </form>
+    </section>
+  </body>
+</html>
