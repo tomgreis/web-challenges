@@ -22,8 +22,16 @@ printSquare(5);
 
 // Uncomment the following function calls and implement the function printCircumference
 
-// printCircumference(4);
-// printCircumference(6);
+const pi = 3.141592653589793;
+
+function printCircumference(radius) {
+  circumference = 2 * pi * radius;
+  console.log(`Der Umfang ist ${circumference}`);
+  console.log(pi);
+}
+
+printCircumference(4);
+printCircumference(6);
 
 /*
 3: We want to use a function which accepts the width and length of a rectangle
@@ -35,5 +43,10 @@ printSquare(5);
 
 // Uncomment the following function calls and implement the function printRectangleArea
 
-// printRectangleArea(5, 7);
-// printRectangleArea(3, 4);
+function printRectangleArea(width, length) {
+  area = width * length;
+  console.log(`The area of the rectangle is ${area} qm.`);
+}
+
+printRectangleArea(5, 7);
+printRectangleArea(3, 4);

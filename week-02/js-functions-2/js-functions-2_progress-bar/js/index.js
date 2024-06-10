@@ -8,6 +8,7 @@ For that:
  - write a function "calculateScrollPercentage" which calculates and returns in percent
    how far the user has scrolled down the page.
    Use the following attributes to achieve this:
+
     - window.scrollY: the Y position of the window on the total webpage
     - window.innerHeight: height of the window
     - document.body.clientHeight: height of the webpage
@@ -21,4 +22,28 @@ For that:
 
 const progressBar = document.querySelector('[data-js="progress-bar"]');
 
-function calculateScrollPercentage() {}
+function calculateScrollPercentage() {
+  const scrollYPosition = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const webpageHeight = document.body.clientHeight;
+  return (scrollYPosition / (webpageHeight - windowHeight)) * 100;
+}
+
+document.addEventListener("scroll", () => {
+  const scrollPositionInPercentage = calculateScrollPercentage();
+  progressBar.style.width = scrollPositionInPercentage + "%";
+});
+
+// alternative
+
+/*
+document.addEventListener("scroll", () => {
+  progressBar.style.width = calculateScrollPercentage() + "%";
+});
+
+function calculateScrollPercentage() {
+  const scrollPercentage =
+    (window.scrollY / (document.body.clientHeight - window.innerHeight)) * 100;
+  return scrollPercentage;
+}
+*/
